@@ -18,7 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet"
         />
-    <link rel="stylesheet" href="./css/styles.css">
+
+    <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
 <body class="body">
@@ -233,55 +234,57 @@
 
 <footer class="footer">
 
-    <div class="container footer-container">
+    <div class="container footer__container">
 
-        <div class="footer-address">
+        <div class="footer__contacts">
         
-            <a href="./index.html" class="footer-logo link"><span class="logo-accent">Web</span>Studio</a>
+            <a href="./index.html" class="logo-footer__link link"><span class="logo__accent">Web</span>Studio</a>
 
-            <address class="">
-                <p class="footer-address-text text">г. Киев, пр-т Леси Украинки, 26</p>
+            <address class="address">
+                <p class="address__text text">г. Киев, пр-т Леси Украинки, 26</p>
 
-                <ul class="footer-address-list list">
-                    <li><a href="mailto:info@devstudio.com" class="footer-address-list-mail link">info@example.com</a></li>
-                    <li><a href="tel:+30961111111" class="footer-address-list-tel link">+380991111111</a></li>
+                <ul class="address__list list">
+                    <li class="address__item"><a href="mailto:info@devstudio.com" 
+                        class="address__mail link">info@example.com</a></li>
+                    <li class="address__item"><a href="tel:+30961111111" 
+                        class="address__tel link">+380991111111</a></li>
                 </ul>
             </address>
         </div>
 
-        <div class="footer-icons">
+        <div class="footer__social">
 
-            <p class="text footer-text">ПРИСОЕДИНЯЙТЕСЬ</p>
+            <p class="text footer__text">ПРИСОЕДИНЯЙТЕСЬ</p>
 
-            <ul class="list list-icons">
+            <ul class="list footer__soclist">
 
-                <li class="footer-icons-flex-element">
-                    <a href="" class="link link-social">
-                        <svg class="icon icons-social footer-icons-social" width="20" height="20">
+                <li class="footer__flex-element">
+                    <a href="" class="link social__link">
+                        <svg class="icon icons-social social__footer-icons" width="20" height="20">
                             <use href="./images/icons.svg#instagram"></use>
                         </svg>
                     </a>
                 </li>
 
-                <li class="footer-icons-flex-element">
-                    <a href="" class="link link-social">
-                        <svg class="icon footer-icons-social" width="20" height="20">
+                <li class="footer__flex-element">
+                    <a href="" class="link social__link">
+                        <svg class="icon social__footer-icons" width="20" height="20">
                             <use href="./images/icons.svg#twitter"></use>
                         </svg>
                     </a>
                 </li>
 
-                <li class="footer-icons-flex-element">
-                    <a href="" class="link link-social">
-                        <svg class="icon icons-social footer-icons-social" width="20" height="20">
+                <li class="footer__flex-element">
+                    <a href="" class="link social__link">
+                        <svg class="icon icons-social social__footer-icons" width="20" height="20">
                             <use href="./images/icons.svg#facebook"></use>
                         </svg>
                     </a>
                 </li>
 
-                <li class="footer-icons-flex-element">
-                    <a href="" class="link link-social">
-                        <svg class="icon icons-social footer-icons-social" width="20" height="20">
+                <li class="footer__flex-element">
+                    <a href="" class="link social__link">
+                        <svg class="icon icons-social social__footer-icons" width="20" height="20">
                             <use href="./images/icons.svg#linkedin"></use>
                         </svg>
                     </a>
@@ -290,18 +293,18 @@
 
         </div>
 
-        <div class="footer-form">
+        <div class="form__container">
             <p class="footer-text">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
                 
-            <form class="footer-mail-form">
-                <input type="email" class="footer-input" name="footer-mail" placeholder="E-mail" id="footer-mail" />
+            <form class="form__mail">
+                <input type="email" class="form-mail__input" name="footer-mail" placeholder="E-mail" id="footer-mail" />
                 
-                <label for="footer-mail" class="footer-label"></label>
+                <label for="footer-mail" class="form-mail__label"></label>
                 
-                <button type="submit" class="footer-btn">
+                <button type="submit" class="form-mail__btn">
                     Подписаться
                 
-                    <svg class="icon-send" width="24" height="24">
+                    <svg class="form-mail__send" width="24" height="24">
                         <use href="./images/icons.svg#icon-icon-send"></use>
                     </svg>
                 
