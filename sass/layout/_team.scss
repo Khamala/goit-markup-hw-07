@@ -1,26 +1,18 @@
 .team {
     background-color: var(--bg-color);
-
     padding-top: 94px;
     padding-bottom: 94px;
 }
-
-.team_container {}
 
 .team__image {
     background-color: var(--primary-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
 }
 
 .team__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    @include font(36px, 700, 1.17, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
-
     margin-top: 0px;
     margin-bottom: 50px;
 }
@@ -45,69 +37,12 @@
 }
 
 .team__subtitle {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
+    @include font(16px, 500, 1.19, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
 .team__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.19;
+    @include font(16px, 400, 1.19, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
-
     margin-bottom: 16px;
-}
-
-
-/*Список ссылок на соцсети*/
-
-.social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
-    width: 44px;
-    height: 44px;
-
-    border-radius: 50%;
-    background-color: var(--primary-bg-color);
-
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social__item:not(:last-child) {
-    margin-right: 10px;
-}
-
-.social__icons {
-    fill: var(--color-icon-primary);
-}
-
-.social__link:hover,
-.social__link:focus {
-    background-color: var(--accent-color);
-}
-
-.social__link:hover .icon,
-.social__link:focus .icon {
-    fill: var(--primary-button-color);
-}
-
-.social__link .icon {
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

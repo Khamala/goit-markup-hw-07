@@ -1,37 +1,28 @@
 .footer {
     background-color: var(--primary-dark-bg-color);
-
     padding-top: 60px;
     padding-bottom: 60px;
-}
 
-.footer__container {
-    display: flex;
-    align-items: baseline;
+    &__container {
+        display: flex;
+        align-items: baseline;
+        }
 }
 
 .logo-footer__link {
-    color: var(--primary-button-color);
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-
     display: inline-block;
+    color: var(--primary-button-color);
+    font-family: var(--second-font);
+    @include font(26px, 700, 1.19, 0.03em);
     margin-bottom: 20px;
+    @include transition(color);
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .logo__accent {
-    color: var(--accent-color);
-}
-
-.logo-footer__link:hover,
-.logo-footer__link:focus {
     color: var(--accent-color);
 }
 
@@ -39,10 +30,7 @@
     margin-right: 70px;
 }
 
-
 /*Footer-kontakts*/
-
-.address {}
 
 .address__list .link:hover,
 .address__list .link:focus {
@@ -50,9 +38,7 @@
 }
 
 .address__list .link {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition(color);
 }
 
 .address__item {
@@ -60,12 +46,9 @@
 }
 
 .address__text {
-    color: var(--primary-button-color);
+    @include font(14px, null, 1.71, 0.03em);
     font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-
+    color: var(--primary-button-color);
     margin-top: 0px;
     margin-bottom: 9px;
 }
@@ -73,15 +56,12 @@
 .address__mail,
 .address__tel {
     color: rgba(255, 255, 255, 0.6);
+    @include font(14px, 400, 1.71, null);
     font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
 }
 
 .address__mail {
     display: inline-block;
-
 }
 
 /*Footer Social*/
@@ -95,10 +75,7 @@
 }
 
 .footer__text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(14px, 700, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--primary-button-color);
     margin: 0;
@@ -106,8 +83,7 @@
 }
 
 .footer__soclist {
-    display: flex;
-    align-items: center;
+    @include centeredFlex(flex);
 }
 
 .footer__flex-element:not(:last-child) {
@@ -115,24 +91,18 @@
 }
 
 .social__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex(flex);
     cursor: pointer;
     width: 44px;
     height: 44px;
     color: var(--primary-button-color);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    @include transition(background-color);
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social__link:hover,
-.social__link:focus {
-    background-color: var(--accent-color);
+    &:hover, &:focus {
+        background-color: var(--accent-color);
+    }
 }
 
 /*Footer-form*/
@@ -149,21 +119,27 @@
     width: 358px;
     height: 50px;
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    @include bordered(rgba(255, 255, 255, 0.3));
     border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     padding-left: 16px;
     color: rgba(255, 255, 255, 0.6);
     margin-right: 12px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        border: 1px solid var(--accent-color);
+    }
 }
 
-.form-mail__input:focus,
-.form-mail__input:hover {
-    border: 1px solid var(--accent-color);
-}
+/*Kostyl*/
+.footer__text-portfolio {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--primary-button-color);
 
-.form-mail__label {}
+    @include font(14px, 700, 1.14, 0.03em);
+}
 
 .form-mail__btn {
     display: flex;
@@ -174,17 +150,14 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: transparent;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(30 / 16);
+    @include font(16px, 700, 1.88, 0.03em);
     padding-left: 29px;
     color: var(--primary-bg-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-mail__btn:hover,
-.form-mail__btn:focus {
-    background-color: var(--button-color-hover);
+    &:hover, &:focus {
+        background-color: var(--button-color-hover);
+    }
 }
 
 .form-mail__send {
